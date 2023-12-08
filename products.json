@@ -5,7 +5,7 @@
       "productName": "Heavyweight Flannel Shirt",
       "amount": 50,
       "price": 199000,
-      "productImage": "/src/assets/products/1.webp"
+      "productImage": "/src/assets/products/1.png"
     },
     {
       "id": 2,
@@ -26,7 +26,7 @@
       "productName": "Midwest Mallards Team Hat",
       "amount": 50,
       "price": 450000,
-      "productImage": "/src/assets/products/4.webp"
+      "productImage": "/src/assets/products/4.png"
     },
     {
       "id": 5,
