@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from 'react'
 import { ProductWarehouse } from "./productWarehouse";
 import "./shopWarehouse.css";
-import { NavbarWarehouse } from "../../components/navbarWarehouse";
+import Navbar from "../../components/navbar1";
+
 
 export const ShopWarehouse = () => {
     const [data, setData] = useState([])
@@ -15,7 +16,7 @@ export const ShopWarehouse = () => {
 
   return (
     <div>
-      <NavbarWarehouse/>
+      <Navbar role = "gudang"/>
       <div className="shop">
         <div className="shopTitle">
           <h1>OnlyCommerce Product</h1>

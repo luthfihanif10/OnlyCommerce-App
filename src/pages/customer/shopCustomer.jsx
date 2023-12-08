@@ -1,9 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from "react";
 import { ProductCustomer } from "./productCustomer";
-import { NavbarCustomer } from "../../components/navbarCustomer";
+
 import "./shopCustomer.css";
+
+import Navbar from "../../components/navbar1";
 import axios from "axios";
+
 
 export const ShopCustomer = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +23,7 @@ export const ShopCustomer = () => {
   }, [])
   return (
     <div>
-      <NavbarCustomer/>
+<Navbar role="user"/>
       <div className="shop">
         <div className="shopTitle">
           <h1>OnlyCommerce Product</h1>

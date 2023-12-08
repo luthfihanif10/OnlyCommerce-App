@@ -2,13 +2,14 @@ import React from "react";
 import "./reqStore.css";
 import { Requests } from "../../../requestings";
 import ReqCardStore from "./reqCardStore";
-import { Navbar } from "../../../components/navbar";
+import Navbar from "../../../components/navbar1";
+
 
 function ReqStore() {
   const totalReq = getReqAmount();
   return (
     <div>
-      <Navbar />
+      <Navbar role="toko" />
       {totalReq > 0 ? (
         <div className="requests">
           <div>
