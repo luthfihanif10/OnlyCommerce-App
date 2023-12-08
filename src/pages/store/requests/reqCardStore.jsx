@@ -1,7 +1,7 @@
 import React from "react";
 
 function ReqCardStore(props) {
-  const { id, productId, productName, amount, productImage, statuse } =
+  const { id, productId, productName, amount, productImage, status } =
     props.data;
   return (
     <div className="req-cards">
@@ -11,7 +11,9 @@ function ReqCardStore(props) {
         <div>
           <p>Id: {productId}</p>
           <p>Amount: {amount}</p>
-          <p>Status: {statuse}</p>
+          <p>
+            Status: <strong>{status}</strong>
+          </p>
         </div>
       </div>
     </div>

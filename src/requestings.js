@@ -11,7 +11,7 @@ export const Requests = [
     productName: "Heavyweight Flannel Shirt",
     amount: 50,
     productImage: product1,
-    statuse: "requested",
+    status: "requested",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const Requests = [
     productName: "Women Sweater",
     amount: 25,
     productImage: product3,
-    statuse: "checking",
+    status: "checking",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const Requests = [
     productName: "Razer Wireless Gaming Mouse",
     amount: 75,
     productImage: product5,
-    statuse: "requested",
+    status: "requested",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const Requests = [
     productName: "Nikon Z 6II Mirrorless",
     amount: 55,
     productImage: product6,
-    statuse: "checked",
+    status: "checked",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ export const Requests = [
     productName: "Wireless Gaming Headset",
     amount: 10,
     productImage: product8,
-    statuse: "confirmed",
+    status: "confirmed",
   },
 ];
 
