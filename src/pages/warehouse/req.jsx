@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import "./req.css";
 import { Requests } from "../../requestings";
 import ReqCards from "./req-cards";
-import { Navbar } from "../../components/navbar";
+import { NavbarWarehouse } from "../../components/navbarWarehouse";
 
 function Req() {
   const totalReq = getReqAmount();
   return (
     <div>
-      <Navbar />
+      <NavbarWarehouse />
       {totalReq > 0 ? (
         <div className="requests">
           <div>
