@@ -26,25 +26,26 @@ export const Cart = () => {
             })}
           </div>
 
-          <p style={{ fontSize: "20px" }}><b> Total: Rp{totalAmount} </b></p>
-        
+          <p style={{ fontSize: "20px" }}>
+            <b> Total: Rp{totalAmount} </b>
+          </p>
+
           <div className="request">
             <button onClick={() => navigate("/")}> Back </button>
             <button
               onClick={() => {
                 checkout();
-                navigate("/request");
+                navigate("/req");
               }}
             >
               {" "}
               Request{" "}
             </button>
           </div>
-        
-      </div>
-    ) : (
-      <h1 style={{textAlign: "center"}}> Your Cart is Empty</h1>
-    )}
-  </div>
+        </div>
+      ) : (
+        <h1 style={{ textAlign: "center" }}> Your Cart is Empty</h1>
+      )}
+    </div>
   );
 };
