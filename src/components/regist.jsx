@@ -8,21 +8,11 @@ function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  async function handleChange(event){
-    if (event.target.id === "floatingUsername") {
-      setFormData({username:event.target.value, email:formData.email, password: formData.password})
-    } else if (event.target.id === "floatingEmail") {
-      setFormData({username:formData.username, email:event.target.value, password: formData.password})
-    } else {
-      setFormData({username:formData.username, email:formData.email, password: event.target.value})
-    }
-
-  }
 
   async function handleSubmit(e){
     e.preventDefault()
     try {
-        await axios.post('http://localhost:8000/register', {
+        await axios.post('https://onlycommerce.onrender.com/register', {
           username,
           password,
         });
@@ -54,8 +44,8 @@ function Register() {
                 <input type="password" className="form-control rounded-3" id="floatingPassword" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <label htmlFor="floatingPassword">Password</label>
               </div>
-              <button className="w-100 mb-2 btn btn-lg rounded-3 btn-success" type="submit">Sign-up</button>
-              <small className="text-body-secondary">Klik Sign-up untuk membuat akun GOFITZ</small>
+              <button className="w-100 mb-2 btn btn-lg rounded-3 btn-dark" type="submit">Sign-up</button>
+              <small className="text-body-secondary">Klik Sign-up untuk membuat akun OnlyCommerce</small>
             </form>
           </div>
         </div>

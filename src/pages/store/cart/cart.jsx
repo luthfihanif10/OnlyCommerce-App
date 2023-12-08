@@ -4,7 +4,7 @@ import { PRODUCTS } from "../../../products";
 import { CartItem } from "./cart-item";
 import { useNavigate } from "react-router-dom";
 import "./cart.css";
-import { Navbar } from "../../../components/navbar";
+import Navbar from "../../../components/navbar1";
 
 export const Cart = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
@@ -14,7 +14,7 @@ export const Cart = () => {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar role ="toko"/>
       <div>
         {totalAmount > 0 ? (
           <div className="cart">

@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios';
-import App from '../App'
-function Login({updateRole}) {
+
+
+function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
 
   async function handleSubmit(e){
     e.preventDefault()
     
     try {
-      const response = await axios.post('http://localhost:8000/login', {
+      const response = await axios.post('https://onlycommerce.onrender.com/login', {
         username,
         password,
       });
@@ -18,7 +20,6 @@ function Login({updateRole}) {
 
       if (data.redirect) {
         // Redirect to the specified URL based on the server response
-        updateRole("toko")
         alert('Login Berhasil')
         
         // ('#modalLogin').modal('hide');
@@ -43,8 +44,18 @@ function Login({updateRole}) {
             <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
-          <div className="modal-body p-5 pt-0">
-            <form className="" onSubmit={handleSubmit}>
+          <div className="modal-body p-5 pt-0 gap-2">
+            <div className="row gap-3">
+          <button className="btn btn-dark" data-bs-dismiss="modal" onClick={() => navigate('warehouse')}>
+        Login Warehouse Employee
+      </button>
+
+      {/* Login Shop Employee Button */}
+      <button className="btn btn-dark" data-bs-dismiss="modal" onClick={() => navigate('/reqstore')}>
+        Login Shop Employee
+      </button>
+      </div>
+            {/* <form className="" onSubmit={handleSubmit}>
               <div className="form-floating mb-3">
                 <input type="username" className="form-control rounded-3" id="floatingEmail" placeholder="Username"  value={username} onChange={(e) => setUsername(e.target.value)}/>
                 <label htmlName="floatingEmail">Username</label>
@@ -55,7 +66,7 @@ function Login({updateRole}) {
               </div>
               <button className="w-100 mb-2 btn btn-lg rounded-3 btn-success" type="submit">Log-in</button>
               <small className="text-body-secondary">Jika Anda belum memiliki akun, silahkan melakukan Sign-Up</small>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>

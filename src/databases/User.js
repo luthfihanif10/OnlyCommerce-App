@@ -50,7 +50,6 @@ async function connect() {
   });
   
   const Users = mongoose.model('Users', newSchema, 'User');
-  // Register route
 
   
   // Login route
@@ -58,26 +57,26 @@ async function connect() {
     const { username = '', password = '' } = req.body;
   
     try {
-      // Find the user using async/await
+
       const user = await Users.findOne({ username });
   
       if (user) {
-        // Compare the hashed password
+
         const match = await bcrypt.compare(password, user.password);
   
         if (match) {
-          // Store user information in the session
+
           req.session.user = { username: user.username, role: user.role };
   console.log(user.role)
-          // Redirect users based on their roles
+
           if (user.role === 'user') {
-            res.json({ redirect: '/user-homepage' });
+            res.json({ redirect: '/customer' });
           } else if (user.role === 'toko') {
             res.json({ redirect: '/toko-homepage' });
           } else if (user.role === 'gudang') {
-            res.json({ redirect: '/gudang-homepage' });
+            res.json({ redirect: '/reqstore' });
           } else {
-            // Unknown role, handle accordingly
+
             res.json('Invalid role');
           }
         } else {
@@ -104,13 +103,13 @@ async function connect() {
       if (existingUser) {
         res.json('Username already exists');
       } else {
-        // Hash the password before saving
+
         const hashedPassword = await bcrypt.hash(password, 10);
   
         const newUser = new Users({
           username,
           password: hashedPassword,
-          role: role || 'user', // Default to 'user' if no role is provided
+          role: role || 'user', 
         });
   
         await newUser.save();
