@@ -7,9 +7,7 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <h2 style={{ display: "flex", fontSize: 50, fontWeight: "bold" }}>
-        <Link to="/">
-          OnlyCommerce
-        </Link>
+        OnlyCommerce
       </h2>
 
       <div className="links">
