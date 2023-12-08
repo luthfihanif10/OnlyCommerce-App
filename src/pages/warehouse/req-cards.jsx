@@ -3,7 +3,8 @@ import { STATUS } from "../../requestings";
 import Form from "react-bootstrap/Form";
 
 function ReqCards(props) {
-  const { id, productId, productName, amount, productImage } = props.data;
+  const { id, productId, productName, amount, productImage, statuse } =
+    props.data;
   return (
     <div className="req-cards">
       <img src={productImage} />

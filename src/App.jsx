@@ -6,6 +6,7 @@ import { ShopContextProvider } from "./context/shop-context";
 import { ShopCustomer } from "./pages/customer/shopCustomer";
 import { ShopWarehouse } from "./pages/warehouse/shopWarehouse";
 import Req from "./pages/warehouse/req";
+import ReqStore from "./pages/store/requests/reqStore";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/req" element={<Req />} />
             <Route path="/customer" element={<ShopCustomer />} />
             <Route path="/warehouse" element={<ShopWarehouse />} />
+            <Route path="/reqstore" element={<ReqStore />} />
           </Routes>
         </Router>
       </ShopContextProvider>
