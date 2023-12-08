@@ -5,7 +5,7 @@ import { Cart } from "./pages/store/cart/cart";
 import { ShopContextProvider } from "./context/shop-context";
 import { ShopCustomer } from "./pages/customer/shopCustomer";
 import { ShopWarehouse } from "./pages/warehouse/shopWarehouse";
-import Req from "./daftar/requests/req";
+import Req from "./pages/warehouse/req";
 
 function App() {
   return (
