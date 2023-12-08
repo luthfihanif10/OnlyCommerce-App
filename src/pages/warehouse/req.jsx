@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import "./req.css";
 import { Requests } from "../../requestings";
 import ReqCards from "./req-cards";
+import { Navbar } from "../../components/navbar";
 
 function Req() {
   const totalReq = getReqAmount();
   return (
     <div>
+      <Navbar />
       {totalReq > 0 ? (
         <div className="requests">
           <div>
@@ -16,12 +18,10 @@ function Req() {
             </h1>
           </div>
           <div className="req-body">
-            <div>
-              {" "}
-              {Requests.map((reqs) => {
-                return <ReqCards data={reqs} />;
-              })}
-            </div>
+            {" "}
+            {Requests.map((reqs) => {
+              return <ReqCards data={reqs} />;
+            })}
           </div>
         </div>
       ) : (
