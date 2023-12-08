@@ -4,7 +4,7 @@ export const ProductCustomer = (props) => {
   const { id, productName, amount, price, productImage } = props.data;
 
   return (
-    <div className="product">
+    <div className="productCustomer">
       <img src={productImage} />
       <div className="description">
         <p>
