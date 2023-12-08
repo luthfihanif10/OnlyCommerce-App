@@ -26,6 +26,12 @@
 }
 
 .req-cards img {
-  width: 25%;
+  width: 15%;
   padding: 10px;
+}
+
+select {
+  color: #3b444b;
+  background: #cccccc;
+  box-shadow: 2px 2px 2px rgba(73, 63, 63, 0.3);
 }

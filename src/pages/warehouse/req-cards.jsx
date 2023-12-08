@@ -1,5 +1,6 @@
 import React from "react";
 import { STATUS } from "../../requestings";
+import Form from "react-bootstrap/Form";
 
 function ReqCards(props) {
   const { id, productId, productName, amount, productImage } = props.data;
@@ -14,11 +15,15 @@ function ReqCards(props) {
         </div>
         <div className="stats">Status:</div>
         <div>
-          <select className="form-select" onSelect={handleSelect}>
+          <Form.Select
+            aria-label="Default select example"
+            onSelect={handleSelect}
+            size="sm"
+          >
             {STATUS.map((option) => (
               <option value={option.value}>{option.label}</option>
             ))}
-          </select>
+          </Form.Select>
         </div>
       </div>
     </div>
