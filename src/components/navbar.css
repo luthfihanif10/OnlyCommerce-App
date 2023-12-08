@@ -1,9 +1,9 @@
 .navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 120px;
-	padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  padding: 0 2rem;
   background-color: #000000;
   color: #eeeeee;
 }
@@ -15,5 +15,6 @@
 
 .links a {
   text-decoration: none;
-  color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255);
+  margin: 10px;
 }

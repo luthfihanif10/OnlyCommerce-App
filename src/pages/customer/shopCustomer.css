@@ -1,0 +1,38 @@
+.shopTitle {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    place-items: center;
+  }
+
+  .productCustomer {
+    border-radius: 15px;
+    width: 300px;
+    height: 450px;
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .productCustomer img {
+    width: 350px;
+  }
+  
+  .productCustomer .description {
+    text-align: center;
+  }
+  
+  .productCustomer:hover {
+    transition: 0.3s ease-in;
+    background-color: #000000;
+    color: #eeeeee;
+    cursor: pointer;
+  }
+  
