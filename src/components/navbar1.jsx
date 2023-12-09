@@ -32,20 +32,12 @@ const navigate = useNavigate()
           <div className="w-25 text-end d-none d-lg-block">
             <button type="button" className="btn btn-outline-dark me-2" data-bs-toggle="modal" data-bs-target="#Login">Login</button>
             <Login />
-            <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalSignIn">Sign-up</button>
-            <Register />
           </div>
         </>
         :
         <div className="w-25 d-block justify-content-end d-flex">
-          <button className="m-0 text-end border-0 d-flex gap-2 justify-content-center align-items-center dropdown-toggle" style={{ background: "transparent" }} type="button" data-bs-toggle="dropdown" aria-expanded="false">
-
-          </button>
-          <ul className="dropdown-menu" >
-            <li><button className="dropdown-item" onClick={() => navigate('/')}>Sign out</button></li>
-            
-          </ul>
-
+          <button type="button" className="btn btn-outline-dark me-2"  onClick={() => navigate('/')}>Sign Out</button>
+           
         </div>
       }
     </header>
