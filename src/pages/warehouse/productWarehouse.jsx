@@ -69,7 +69,7 @@ export const ProductWarehouse = (props) => {
         </div>
       
       <button id={`btnWrh${id_produk}`} className="addToCartBttn" onClick={updateProduk}>
-        Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+        Update {cartItemCount > 0 && <> ({cartItemCount})</>}
       </button>
     </div>
   );
