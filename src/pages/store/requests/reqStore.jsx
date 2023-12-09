@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import './reqStore.css'
-import { Requests } from '../../../requestings'
 import ReqCardStore from './reqCardStore'
 import Navbar from '../../../components/navbar1'
 import axios from 'axios'
