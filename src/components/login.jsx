@@ -51,7 +51,7 @@ function Login() {
       </button>
 
       {/* Login Shop Employee Button */}
-      <button className="btn btn-dark" data-bs-dismiss="modal" onClick={() => navigate('/reqstore')}>
+      <button className="btn btn-dark" data-bs-dismiss="modal" onClick={() => navigate('/shop')}>
         Login Shop Employee
       </button>
       </div>

@@ -2,8 +2,9 @@
 import React, {useEffect, useState} from "react";
 import { Product } from "./product";
 import "./shop.css";
-import { Navbar } from "../../../components/navbar";
+
 import axios from "axios";
+import Navbar from "../../../components/navbar1";
 
 export const Shop = () => {
   const [products, setProducts] = useState([]);
