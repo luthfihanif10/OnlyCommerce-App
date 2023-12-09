@@ -24,23 +24,23 @@ function App() {
         <Router>
           <Routes>
 
+            {/* TAMPILAN DISPLAY PELANGGAN */}
+            <Route path="/customer" element={<ShopCustomer />} />   {/* Alief - DONE */}
+
+            {/* TAMPILAN UPDATE STAF GUDANG (QUALITY CONTROL) */}
+            <Route path="/warehouse" element={<ShopWarehouse />} />   {/* Alief */}
+
+            {/* TAMPILAN REQUEST STAF GUDANG + UPDATE STATUS*/}        {/* Sam */}
+            <Route path="/req" element={<Req />} />
+
             {/* TAMPILAN DISPLAY STAF TOKO */}          {/* ALief - DONE */}
             <Route path="/" element={<Shop />} />
 
             {/* Jujur, gatau ini apa wkwkwk */}         {/* Alief - gakepake */}
             <Route path="/cart" element={<Cart />} />
 
-            {/* TAMPILAN REQUEST STAF GUDANG + UPDATE STATUS*/}        {/* Sam */}
-            <Route path="/req" element={<Req />} />
-
-            {/* TAMPILAN DISPLAY PELANGGAN */}
-            <Route path="/customer" element={<ShopCustomer />} />   {/* Alief - DONE */}
-
-            {/* TAMPILAN UPDATE STAF GUDANG (QUALITY CONTROL) */}
-            <Route path="/warehouse" element={<ShopWarehouse />} />   {/* Alief */}
-            
             {/* TAMPILAN REQUEST STAF TOKO */}
-            <Route path="/reqstore" element={<ReqStore />} />       {/* Alief */}
+            <Route path="/reqstore" element={<ReqStore />} />       {/* Sam */}
           </Routes>
         </Router>
       </ShopContextProvider>
