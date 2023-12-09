@@ -5,56 +5,56 @@
       "productName": "Heavyweight Flannel Shirt",
       "amount": 50,
       "price": 199000,
-      "productImage": "/src/assets/products/1.png"
+      "productImage": "/products/1.png"
     },
     {
       "id": 2,
       "productName": "Men T-Shirt ",
       "amount": 50,
       "price": 150000,
-      "productImage": "/src/assets/products/2.png"
+      "productImage": "/products/2.png"
     },
     {
       "id": 3,
       "productName": "Women Sweater",
       "amount": 50,
       "price": 299000,
-      "productImage": "/src/assets/products/3.png"
+      "productImage": "/products/3.png"
     },
     {
       "id": 4,
       "productName": "Midwest Mallards Team Hat",
       "amount": 50,
       "price": 450000,
-      "productImage": "/src/assets/products/4.png"
+      "productImage": "/products/4.png"
     },
     {
       "id": 5,
       "productName": "Razer Wireless Gaming Mouse",
       "amount": 50,
       "price": 389000,
-      "productImage": "/src/assets/products/5.png"
+      "productImage": "/products/5.png"
     },
     {
       "id": 6,
       "productName": "Nikon Z 6II Mirrorless",
       "amount": 50,
       "price": 25999999,
-      "productImage": "/src/assets/products/6.webp"
+      "productImage": "/products/6.webp"
     },
     {
       "id": 7,
       "productName": "Vivo Color Earphone",
       "amount": 50,
       "price": 120000,
-      "productImage": "/src/assets/products/7.webp"
+      "productImage": "/products/7.webp"
     },
     {
       "id": 8,
       "productName": "Wireless Gaming Headset",
       "amount": 50,
       "price": 390000,
-      "productImage": "/src/assets/products/8.webp"
+      "productImage": "/products/8.webp"
     }
   ]
 }
