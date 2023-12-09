@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 import React, { useEffect, useState } from 'react'
 import { ProductWarehouse } from "./productWarehouse";
@@ -6,13 +7,18 @@ import Navbar from "../../components/navbar1";
 
 
 export const ShopWarehouse = () => {
-    const [data, setData] = useState([])
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios.get('https://onlycommerce.onrender.com/v1/products')
+      .then(result => {
+        console.log('data API', result.data.data);
 
-    useEffect(()=> {
-        axios.get('http://localhost:3000/products')
-        .then(res => setData(res.data))
-        .catch(err => console.log(err));
-    }, [])
+        setProducts(result.data.data);
+      })
+      .catch(err => {
+        console.log('Error: ', err);
+      })
+  }, [])
 
   return (
     <div>
@@ -23,8 +29,8 @@ export const ShopWarehouse = () => {
         </div>
 
         <div className="products">
-          {data.map((product) => (
-            <ProductWarehouse data={product} />
+          {products.map((product) => (
+            <ProductWarehouse key={product.id_produk} isiData={product}/>
           ))}
         </div>
       </div>
