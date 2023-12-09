@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import { Alert } from "bootstrap";
 
 
 function Register() {
@@ -11,17 +12,8 @@ function Register() {
 
   async function handleSubmit(e){
     e.preventDefault()
-    try {
-        await axios.post('https://onlycommerce.onrender.com/register', {
-          username,
-          password,
-        });
-        alert('Registration successful');
-        // You can redirect to the login page or handle navigation as needed
-      } catch (error) {
-        console.error(error);
-        alert('Registration failed');
-      }
+    alert("fitur ini masih dalam tahap pengembangan")
+ 
   }
 
   return (
