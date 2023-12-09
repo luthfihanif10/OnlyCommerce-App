@@ -1,23 +1,20 @@
-import React from "react";
-
-function ReqCardStore(props) {
-  const { id, productId, productName, amount, productImage, status } =
-    props.data;
-  return (
-    <div className="req-cards">
-      <img src={productImage} />
-      <div className="info">
-        <b>{productName}</b>
-        <div>
-          <p>Id: {productId}</p>
-          <p>Amount: {amount}</p>
-          <p>
-            Status: <strong>{status}</strong>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+function ReqCardStore({ data }) {
+	const { produk, jumlah: amount, status_request: status } = data
+	return (
+		<div className='req-cards'>
+			<img src={`/src/assets/products/${produk?.id_produk}.png`} />
+			<div className='info'>
+				<b>{produk?.nama_produk}</b>
+				<div>
+					<p>Id: {produk?.id_produk}</p>
+					<p>Amount: {amount}</p>
+					<p>
+						Status: <strong>{status}</strong>
+					</p>
+				</div>
+			</div>
+		</div>
+	)
 }
 
-export default ReqCardStore;
+export default ReqCardStore
