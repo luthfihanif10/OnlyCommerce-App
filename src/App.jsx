@@ -25,7 +25,7 @@ function App() {
           <Routes>
 
             {/* TAMPILAN DISPLAY PELANGGAN */}
-            <Route path="/customer" element={<ShopCustomer />} />   {/* Alief - DONE */}
+            <Route path="/" element={<ShopCustomer />} />   {/* Alief - DONE */}
 
             {/* TAMPILAN UPDATE STAF GUDANG (QUALITY CONTROL) */}
             <Route path="/warehouse" element={<ShopWarehouse />} />   {/* Alief */}
@@ -34,7 +34,7 @@ function App() {
             <Route path="/req" element={<Req />} />
 
             {/* TAMPILAN DISPLAY STAF TOKO */}          {/* ALief - DONE */}
-            <Route path="/" element={<Shop />} />
+            <Route path="/shop" element={<Shop />} />
 
             {/* Jujur, gatau ini apa wkwkwk */}         {/* Alief - gakepake */}
             <Route path="/cart" element={<Cart />} />

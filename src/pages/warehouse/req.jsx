@@ -2,8 +2,8 @@ import { useContext, useState, useEffect } from 'react'
 import './req.css'
 import { Requests } from '../../requestings'
 import ReqCards from './req-cards'
-import { NavbarWarehouse } from '../../components/navbarWarehouse'
 import axios from 'axios'
+import Navbar from '../../components/navbar1'
 
 function Req() {
 	const [requests, setRequests] = useState([])
@@ -18,7 +18,7 @@ function Req() {
 	const totalReq = getReqAmount(requests)
 	return (
 		<div>
-			<NavbarWarehouse />
+			<Navbar role="gudang" />
 			{totalReq > 0 ? (
 				<div className='requests'>
 					<div>

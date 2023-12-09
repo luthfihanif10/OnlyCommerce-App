@@ -17,14 +17,14 @@ const navigate = useNavigate()
   return (
     <header data-testid="Navbar" className="px-5 d-flex flex-wrap align-items-center justify-content-between border-bottom" style={{ height: "10vh" }}>
       <div className="w-25 mb-0">
-        <Link to={role === "user" ? '/' :(role==="toko"?  '/shop' : '/shop2') } className="d-inline-flex link-body-emphasis text-decoration-none">
+        <Link to={role === "user" ? '/' :(role==="toko"?  '/shop' : '/warehouse') } className="d-inline-flex link-body-emphasis text-decoration-none">
           <span className="badge bg-dark fs-5">OnlyCommerce</span>
         </Link>
       </div>
 
       <ul className="nav w-50 d-none d-lg-flex justify-content-center">
         <li><Link to="/reqstore" className={role === "toko" ? "nav-link px-2 link-body-emphasis" : "d-none"}>Store</Link></li>
-        <li><Link to="/warehouse" className={role === "gudang" ? "nav-link px-2 link-body-emphasis" : "d-none"}>Warehouse</Link></li>
+        <li><Link to="/req" className={role === "gudang" ? "nav-link px-2 link-body-emphasis" : "d-none"}>Warehouse</Link></li>
         
       </ul>
       {role === "user" ?
@@ -45,9 +45,7 @@ const navigate = useNavigate()
             <li><button className="dropdown-item" onClick={() => navigate('/')}>Sign out</button></li>
             
           </ul>
-          <li>        <Link to="/cart">
-          {role === "toko" ?<><FaShoppingCart size={20} style={{color: "#000000",}}/></>  : <></>}
-        </Link></li>
+
         </div>
       }
     </header>
